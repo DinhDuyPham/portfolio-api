@@ -14,7 +14,9 @@ const authRouter = require('./routes/authRouter');
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://portfolio-demo-lake.vercel.app'
+}));
 db.connect();
 
 app.get('/', (req, res) => {
