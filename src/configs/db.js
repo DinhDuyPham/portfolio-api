@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const connectUri = process.env.MONGODB_URI ?? 'mongodb://localhost:27017/portfolio';
+const connectUri = process.env.MONGODB_URI;
+// ?? "m@pdduy.7ucad.mongodb.net/"
 const connect = async () => {
     try {
         await mongoose.connect(connectUri);
